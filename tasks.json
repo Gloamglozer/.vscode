@@ -44,7 +44,7 @@
         {
             "label": "Convert from .py to .ipynb",
             "type": "shell",
-            "command": "jupytext --to notebook ${file}",
+            "command": "jupytext --to notebook ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
             "options": {
                 "cwd": "${fileDirname}"
             },
@@ -57,7 +57,7 @@
         {
             "label": "Update corresponding .ipynb",
             "type": "shell",
-            "command": "jupytext --to notebook --update ${file}",
+            "command": "jupytext --to notebook --update ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
             "options": {
                 "cwd": "${fileDirname}"
             },
