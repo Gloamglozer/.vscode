@@ -55,6 +55,19 @@
             "problemMatcher": []
         },
         {
+            "label": "Update corresponding .ipynb",
+            "type": "shell",
+            "command": "jupytext --to notebook --update ${file}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "Convert from .ui to .py",
             "type": "shell",
             "command": "pyuic5 ${file} -o ${fileBasenameNoExtension}.py",
