@@ -42,16 +42,17 @@
             }
         },
         {
-            "label": "Run Python In Test Mode",
+            "label": "Convert from .py to .ipynb",
             "type": "shell",
-            "command": "python ${file} test",
+            "command": "jupytext --to notebook ${file}",
             "options": {
-                "cwd": "/test"
+                "cwd": "${fileDirname}"
             },
             "group": {
-                "kind": "test",
-                "isDefault": true
-            }
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
         },
         {
             "label": "Convert from .ui to .py",
