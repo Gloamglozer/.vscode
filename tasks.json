@@ -57,14 +57,28 @@
         {
             "label": "Run Python In Test Mode",
             "type": "shell",
-            "command": "python ${file} test",
+            "command": "jupytext --to notebook ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
             "options": {
-                "cwd": "/test"
+                "cwd": "${fileDirname}"
             },
             "group": {
-                "kind": "test",
-                "isDefault": true
-            }
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Update corresponding .ipynb",
+            "type": "shell",
+            "command": "jupytext --to notebook --update ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
         },
         {
             "label": "Convert from .ui to .py",

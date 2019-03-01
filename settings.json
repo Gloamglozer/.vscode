@@ -9,5 +9,59 @@
     "python.unitTest.pyTestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
     "python.unitTest.unittestEnabled": false,
-    "python.unitTest.promptToConfigure": false
+    "python.unitTest.promptToConfigure": false,
+
+    "editor.cursorBlinking": "blink",
+    "editor.minimap.enabled": false,
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "#910106",
+    "vim.easymotionMarkerYOffset": -1,
+    "vim.leader": "\\",
+    "vim.handleKeys": {
+        "<C-f>": false,
+        "<C-w>": false,
+        "<C-h>": false,
+        "<C-]>": false,
+        "<C-[>": false,
+        "<C-d>": true,
+        "<C-v>": false
+    },
+    "window.zoomLevel": -1,
+    "vim.useCtrlKeys": false,
+    "git.autofetch": false,
+    "git.promptToSaveFilesBeforeCommit": true,
+    "vim.foldfix": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "f",
+                "d"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.hovers.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.gitExplorer.files.layout": "tree",
+    "gitlens.historyExplorer.enabled": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "vim.normalModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive": [{
+            "before": [
+                "\\"
+            ],
+            "after": [
+                "\\",
+                "\\",
+                "s"
+            ]
+        }
+    ],
+    "jupyter.appendResults": false,
 }
