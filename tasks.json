@@ -55,7 +55,20 @@
             }
         },
         {
-            "label": "Convert from .py to .ipynb",
+            "label": "Run Julia",
+            "type": "shell",
+            "command": "julia ${file}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Python In Test Mode",
             "type": "shell",
             "command": "jupytext --to notebook ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
             "options": {
@@ -97,6 +110,19 @@
             "label": "Test .docx generation",
             "type": "shell",
             "command": "python ${file} ${fileBasenameNoExtension} & ${fileBasenameNoExtension}.docx",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run IronPython 2.7",
+            "type": "shell",
+            "command": "ipy ${file}",
             "options": {
                 "cwd": "${fileDirname}"
             },
