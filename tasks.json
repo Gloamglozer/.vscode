@@ -68,6 +68,19 @@
             "problemMatcher": []
         },
         {
+            "label": "Run Node.js",
+            "type": "shell",
+            "command": "node ${file}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "Run Python In Test Mode",
             "type": "shell",
             "command": "jupytext --to notebook ${file}; jupyter nbconvert --to notebook --execute ${fileBasenameNoExtension}.ipynb --output ${fileBasenameNoExtension}.ipynb",
