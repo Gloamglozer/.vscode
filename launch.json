@@ -9,9 +9,9 @@
             "type": "node",
             "request": "launch",
             "name": "Debug Single .js File",
-            "program": "${workspaceFolder}/3.js",
-            "cwd": "${workspaceFolder}"
-        }
+            "program": "${file}",
+            "cwd": "${fileDirname}"
+        },
         {
             "name": "Python: Current File",
             "type": "python",
